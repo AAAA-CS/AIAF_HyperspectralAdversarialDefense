@@ -24,11 +24,11 @@ https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 [ Torchattacks](https://github.com/Harry24k/adversarial-attacks-pytorch "> Torchattacks")
 
 # Citation
-If you use this code，please cite the following BibTex:
-@article{ 
-  title={Attack-invariant attention feature for adversarial defense in hyperspectral image classification},
-  author={C.Shi,Y.Liu,M.Zhao,C.-M.Pun},
-  journal={Pattern Recognization},
-  year={2023}
+If you use this code，please cite the following BibTex:<br>
+@article{ <br>
+  title={Attack-invariant attention feature for adversarial defense in hyperspectral image classification},<br>
+  author={C.Shi,Y.Liu,M.Zhao,C.-M.Pun},<br>
+  journal={Pattern Recognization},<br>
+  year={2023}<br>
 }
 
