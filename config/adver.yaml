@@ -1,0 +1,79 @@
+exp_setting:
+  exp_name: 'adver'
+  checkpoint_dir: 'checkpoint/'
+  log_dir: 'log/'
+  seed: 1
+  img_size: 26
+  img_depth: 3
+  natural: './adv_example/train/nat'
+  adv1: './adv_example/train/adv1'
+  adv2: './adv_example/train/adv2'
+  label_dirs: './adv_example/train/label_true.pkl'
+  test_natural: './adv_example/test/nat'
+  test_adv1: './adv_example/test/adv1'
+  test_adv2: './adv_example/test/adv2'
+  test_label_dirs: './adv_example/test/label_true.pkl'
+
+
+model:
+  autoencoder:
+    encoder: [['conv', 128,3,1,1,'bn','LeakyReLU','MP',''],
+              ['conv', 256,3,1,1,'bn','LeakyReLU','MP',''],
+              ['conv', 512,3,1,1,'bn','LeakyReLU','MP','DP'],
+              ['conv', 1024,3,1,1,'bn','LeakyReLU','AP',''],
+              ['conv', 2048,3,1,1,  '','','','']
+             ]
+    code_dim: 0
+    decoder: [['conv', 1024,3,1,0,'bn','LeakyReLU',True],
+              ['conv', 512,3,1,1,'bn','LeakyReLU',False],
+              ['conv', 256,4,2,1,'bn','LeakyReLU',False],
+              ['conv', 128,3,2,0,'bn','LeakyReLU',False],
+              ['conv', 3,4,2,1, '','',False]
+             ]
+    lr: 0.0001
+    betas: [0.5,0.999]
+  D_pix:
+    dnn: [['conv', 128,4,2,2,'','LeakyReLU'],
+          ['conv', 256,2,2,1,'','LeakyReLU'],
+          ['conv', 512,4,2,1,'','LeakyReLU'],
+          ['conv', 1024,4,2,1,'','LeakyReLU'],
+          ['fc', 2048, '', 'LeakyReLU',0],
+          ['fc', 1, '', '',0]
+         ]
+    lr: 0.0001
+    betas: [0.5,0.999]
+
+trainer:
+  total_step: 20000
+  batch_size: 64
+
+  lambda:
+    nor:
+      init:  0.000001
+      final: 0.000001
+      step:  1
+    attack_invariant:
+      init:  0.5
+      final: 0.5
+      step:  1
+    gp:
+      init: 30
+      final: 30
+      step: 1
+    pix_adv:
+      init: 0.01
+      final: 0.01
+      step: 1
+    mse_for:
+      init: 20
+      final: 20
+      step: 1
+
+  verbose_step: 50
+  plot_step: 200
+  checkpoint_step: 1000
+  save_log: True
+  show_fig: True
+  save_fig: True
+  save_checkpoint: True
+  save_best_only: False
