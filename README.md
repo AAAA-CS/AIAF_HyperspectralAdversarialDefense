@@ -17,12 +17,12 @@ Scipy
 
 3. To train the "AIAF_train.py" to defend against adversarial examples.<br>
   ```asp
-                             $python "AIAF_train.py" --dataset PaviaU
+                             $ python "AIAF_train.py" --dataset PaviaU
    ```
    
 4. To test with a existing model:<br>
     ```asp
-                             $python AIAF_test.py --dataset PaviaU
+                             $ python AIAF_test.py --dataset PaviaU
    ```
 						  
 # Related works
