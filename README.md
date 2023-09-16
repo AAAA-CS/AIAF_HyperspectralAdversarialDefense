@@ -5,7 +5,7 @@ Numpy 1.22.4<br>
 Scipy
 
 # Usage
-1. To train the "targetmodel.py" with dataset PvaiaU ,which will generate checkpoint:'/1000_net_params_single4_Nonormalize.pkl'.  It's trained by a simple CNN classifier,you can try other targetmodel，such as ResNet，VGG.<br>
+1. To train the "targetmodel.py" with dataset PvaiaU ,which will generate checkpoint:'/1000_net_params_single4_Nonormalize.pkl'.  It's trained by a simple CNN classifier,you can try other targetmodel，such as ResNet, VGG.<br>
  ```asp
                         $ python targetmodel.py --dataset PaviaU --train 
    ```
@@ -33,8 +33,9 @@ Scipy
 If you use this code，please cite the following BibTex:<br>
 @article{ <br>
   title={Attack-invariant attention feature for adversarial defense in hyperspectral image classification},<br>
-  author={C.Shi,Y.Liu,M.Zhao,C.-M.Pun},<br>
+  author={C.Shi,Y.Liu,M.Zhao,C.-M.Pun,Q.Miao},<br>
   journal={Pattern Recognization},<br>
-  year={2023}<br>
+  year={2023},<br>
+  DOI={10.1016/j.patcog.2023.109955}<br>
 }
 
