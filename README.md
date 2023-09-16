@@ -1,8 +1,7 @@
-# Attack-invariant-attention-feature-for-adversarial-defense-in-hyperspectral-image-classification
 # Prerequisites
-Python 3.8.16
-Pytorch 1.12.1
-Numpy 1.22.4
+Python 3.8.16<br>
+Pytorch 1.12.1<br>
+Numpy 1.22.4<br>
 Scipy
 
 # Usage
@@ -21,7 +20,7 @@ https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
                           $python AIAF_test.py --dataset PaviaU
 						  
 # Related works
->[ ARN](https://github.com/dwDavidxd/ARN " ARN")
+>[ ARN](https://github.com/dwDavidxd/ARN " ARN")<br>
 [ Torchattacks](https://github.com/Harry24k/adversarial-attacks-pytorch "> Torchattacks")
 
 # Citation
