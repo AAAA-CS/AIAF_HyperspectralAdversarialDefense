@@ -5,20 +5,25 @@ Numpy 1.22.4<br>
 Scipy
 
 # Usage
-1. To train the "targetmodel.py" with dataset PvaiaU ,which will generate targetmodel checkpoint:'/1000_net_params_single4_Nonormalize.pkl'.<br>
-                      $ python targetmodel.py --dataset PaviaU --train
-  it's trained by a simple CNN classifier,you can try other targetmodel，such as ResNet，VGG.
+1. To train the "targetmodel.py" with dataset PvaiaU ,which will generate checkpoint:'/1000_net_params_single4_Nonormalize.pkl'.  It's trained by a simple CNN classifier,you can try other targetmodel，such as ResNet，VGG.<br>
+ ```asp
+                                                $ python targetmodel.py --dataset PaviaU --train 
+   ```
   
 2. Besides, the hyperspectral dataset is sourced from the link below , you can use your own dataset by matlab. I wish "SelectSample.m" could help you to select training examples. dataset link:<br>
 ```asp
-https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
+                                  https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 ```
 
 3. To train the "AIAF_train.py" to defend against adversarial examples.<br>
-                          $python "AIAF_train.py" --dataset PaviaU
+  ```asp
+                                                  $python "AIAF_train.py" --dataset PaviaU
+   ```
    
 4. To test with a existing model:<br>
-                          $python AIAF_test.py --dataset PaviaU
+    ```asp
+                                                  $python AIAF_test.py --dataset PaviaU
+   ```
 						  
 # Related works
 >[ ARN](https://github.com/dwDavidxd/ARN " ARN")<br>
