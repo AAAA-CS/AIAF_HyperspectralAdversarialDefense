@@ -16,6 +16,7 @@ https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 
 3. To train the "AIAF_train.py" to defend against adversarial examples.
                           $python "AIAF_train.py" --dataset PaviaU
+   
 4. To test with a existing model:
                           $python AIAF_test.py --dataset PaviaU
 						  
